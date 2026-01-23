@@ -6744,8 +6744,10 @@ Implements SyntaxArea.IEditor,SyntaxArea.MessageReceiver
 		#tag Setter
 			Set
 			  mSuggestionPopupBackColor = value
-			  AutocompleteCancelled(True)
-			  
+			  If MyAutocompletePopup <> Nil And MyAutocompletePopup.Visible Then
+			    AutocompleteCancelled(True)
+			  End If
+
 			End Set
 		#tag EndSetter
 		SuggestionPopupBackColor As Color
@@ -6760,8 +6762,10 @@ Implements SyntaxArea.IEditor,SyntaxArea.MessageReceiver
 		#tag Setter
 			Set
 			  mSuggestionPopupSelectedTextColor = value
-			  AutocompleteCancelled(True)
-			  
+			  If MyAutocompletePopup <> Nil And MyAutocompletePopup.Visible Then
+			    AutocompleteCancelled(True)
+			  End If
+
 			End Set
 		#tag EndSetter
 		SuggestionPopupSelectedTextColor As Color
@@ -6776,8 +6780,10 @@ Implements SyntaxArea.IEditor,SyntaxArea.MessageReceiver
 		#tag Setter
 			Set
 			  mSuggestionPopupTextColor = value
-			  AutocompleteCancelled(True)
-			  
+			  If MyAutocompletePopup <> Nil And MyAutocompletePopup.Visible Then
+			    AutocompleteCancelled(True)
+			  End If
+
 			End Set
 		#tag EndSetter
 		SuggestionPopupTextColor As Color
